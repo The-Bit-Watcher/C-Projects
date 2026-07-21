@@ -1,0 +1,71 @@
+\hypertarget{NotificationSystem_8h_source}{}\doxysection{Notification\+System.\+h}
+\mbox{\hyperlink{NotificationSystem_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef NOTIFICATIONSYSTEM\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define NOTIFICATIONSYSTEM\_H}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{comment}{// Forward declaration}}
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{classUsers}{Users}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{27 \textcolor{keyword}{class }\mbox{\hyperlink{classNotificationObserver}{NotificationObserver}} \{}
+\DoxyCodeLine{28 \textcolor{keyword}{public}:}
+\DoxyCodeLine{32     \textcolor{keyword}{virtual} \mbox{\hyperlink{classNotificationObserver_a72a10213ed2587e46374a3d06df6c64b}{\string~NotificationObserver}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{40     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classNotificationObserver_ab83151ebf01e84cb648a29dadf03b6e5}{update}}(\textcolor{keyword}{const} std::string\& message, }
+\DoxyCodeLine{41                        \textcolor{keyword}{const} std::string\& roomName, }
+\DoxyCodeLine{42                        \textcolor{keyword}{const} std::string\& userName) = 0;}
+\DoxyCodeLine{43 \};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{51 \textcolor{keyword}{class }\mbox{\hyperlink{classNotificationSubject}{NotificationSubject}} \{}
+\DoxyCodeLine{52 \textcolor{keyword}{public}:}
+\DoxyCodeLine{56     \textcolor{keyword}{virtual} \mbox{\hyperlink{classNotificationSubject_a7249442283691e640c5c6572520910de}{\string~NotificationSubject}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{57     }
+\DoxyCodeLine{62     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classNotificationSubject_a53a5219c0947490dd94bd2f2f931bcc1}{registerObserver}}(\mbox{\hyperlink{classNotificationObserver}{NotificationObserver}}* observer) = 0;}
+\DoxyCodeLine{63     }
+\DoxyCodeLine{68     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classNotificationSubject_ac07dfea6fe046d3a736a87b6a41b5163}{removeObserver}}(\mbox{\hyperlink{classNotificationObserver}{NotificationObserver}}* observer) = 0;}
+\DoxyCodeLine{69     }
+\DoxyCodeLine{76     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classNotificationSubject_a2ba9c9311d3b31318ade972891fb8426}{notifyObservers}}(\textcolor{keyword}{const} std::string\& message,}
+\DoxyCodeLine{77                                 \textcolor{keyword}{const} std::string\& roomName,}
+\DoxyCodeLine{78                                 \textcolor{keyword}{const} std::string\& userName) = 0;}
+\DoxyCodeLine{79 \};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{88 \textcolor{keyword}{class }\mbox{\hyperlink{classChatNotificationSystem}{ChatNotificationSystem}} : \textcolor{keyword}{public} \mbox{\hyperlink{classNotificationSubject}{NotificationSubject}} \{}
+\DoxyCodeLine{89 \textcolor{keyword}{private}:}
+\DoxyCodeLine{90     std::vector<NotificationObserver*> observers;  }
+\DoxyCodeLine{91     \textcolor{keyword}{static} \mbox{\hyperlink{classChatNotificationSystem}{ChatNotificationSystem}}* instance;       }
+\DoxyCodeLine{92     \textcolor{keywordtype}{bool} isNotifying = \textcolor{keyword}{false};                      }
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \textcolor{keyword}{public}:}
+\DoxyCodeLine{102     \textcolor{keyword}{static} \mbox{\hyperlink{classChatNotificationSystem}{ChatNotificationSystem}}* \mbox{\hyperlink{classChatNotificationSystem_aac95566bb52fda70ab6014dcb99f74a8}{getInstance}}();}
+\DoxyCodeLine{103     }
+\DoxyCodeLine{108     \textcolor{keywordtype}{void} \mbox{\hyperlink{classChatNotificationSystem_ae5fc8e97dff458a731b434da83084344}{registerObserver}}(\mbox{\hyperlink{classNotificationObserver}{NotificationObserver}}* observer) \textcolor{keyword}{override};}
+\DoxyCodeLine{109     }
+\DoxyCodeLine{114     \textcolor{keywordtype}{void} \mbox{\hyperlink{classChatNotificationSystem_a7b33d33c3dffa99bf70cc8eaf3da39ba}{removeObserver}}(\mbox{\hyperlink{classNotificationObserver}{NotificationObserver}}* observer) \textcolor{keyword}{override};}
+\DoxyCodeLine{115     }
+\DoxyCodeLine{124     \textcolor{keywordtype}{void} \mbox{\hyperlink{classChatNotificationSystem_a5ef2d51a74bb6743243c99012c6231a2}{notifyObservers}}(\textcolor{keyword}{const} std::string\& message,}
+\DoxyCodeLine{125                         \textcolor{keyword}{const} std::string\& roomName,}
+\DoxyCodeLine{126                         \textcolor{keyword}{const} std::string\& userName) \textcolor{keyword}{override};}
+\DoxyCodeLine{127     }
+\DoxyCodeLine{128 \textcolor{keyword}{private}:}
+\DoxyCodeLine{132     \mbox{\hyperlink{classChatNotificationSystem}{ChatNotificationSystem}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{133 \};}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{142 \textcolor{keyword}{class }\mbox{\hyperlink{classUserNotificationObserver}{UserNotificationObserver}} : \textcolor{keyword}{public} \mbox{\hyperlink{classNotificationObserver}{NotificationObserver}} \{}
+\DoxyCodeLine{143 \textcolor{keyword}{private}:}
+\DoxyCodeLine{144     \mbox{\hyperlink{classUsers}{Users}}* user;  }
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{keyword}{public}:}
+\DoxyCodeLine{151     \mbox{\hyperlink{classUserNotificationObserver_a4843ef10641584fe2afcb22ec3c77420}{UserNotificationObserver}}(\mbox{\hyperlink{classUsers}{Users}}* user\_);}
+\DoxyCodeLine{152     }
+\DoxyCodeLine{161     \textcolor{keywordtype}{void} \mbox{\hyperlink{classUserNotificationObserver_a3e04d3ad821276ce987f375c392e9e56}{update}}(\textcolor{keyword}{const} std::string\& message,}
+\DoxyCodeLine{162                 \textcolor{keyword}{const} std::string\& roomName,}
+\DoxyCodeLine{163                 \textcolor{keyword}{const} std::string\& userName) \textcolor{keyword}{override};}
+\DoxyCodeLine{164 \};}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

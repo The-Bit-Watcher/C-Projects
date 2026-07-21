@@ -1,0 +1,88 @@
+\hypertarget{classCommand}{}\doxysection{Command Class Reference}
+\label{classCommand}\index{Command@{Command}}
+
+
+Abstract base class for all command objects in the chat system.  
+
+
+
+
+{\ttfamily \#include $<$Command.\+h$>$}
+
+
+
+Inheritance diagram for Command\+:
+% FIG 0
+
+
+Collaboration diagram for Command\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCommand_a4d479fdc5c38a51a4f827fb6152ff793}{Command}} (const std\+::string \&\mbox{\hyperlink{classCommand_aefb89941a5b2b0b0648cf7b98bb37762}{message}}, \mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$\mbox{\hyperlink{classCommand_ac38d7713bb9660a23a752a2a2c938dd5}{room}}, \mbox{\hyperlink{classUsers}{Users}} $\ast$users)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classCommand}{Command}} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{execute}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual method to execute the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCommand_ac38d7713bb9660a23a752a2a2c938dd5}\label{classCommand_ac38d7713bb9660a23a752a2a2c938dd5}} 
+\mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$ {\bfseries room}
+\begin{DoxyCompactList}\small\item\em Pointer to the target chat room for the command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCommand_afaaac0a861b0632822721717a8b833eb}\label{classCommand_afaaac0a861b0632822721717a8b833eb}} 
+\mbox{\hyperlink{classUsers}{Users}} $\ast$ {\bfseries from\+User}
+\begin{DoxyCompactList}\small\item\em Pointer to the user who initiated the command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCommand_aefb89941a5b2b0b0648cf7b98bb37762}\label{classCommand_aefb89941a5b2b0b0648cf7b98bb37762}} 
+std\+::string {\bfseries message}
+\begin{DoxyCompactList}\small\item\em The message content to be processed by the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for all command objects in the chat system. 
+
+Implements the \mbox{\hyperlink{classCommand}{Command}} Pattern to encapsulate operations as objects. Derived classes implement specific actions like sending or saving messages. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCommand_a4d479fdc5c38a51a4f827fb6152ff793}\label{classCommand_a4d479fdc5c38a51a4f827fb6152ff793}} 
+\index{Command@{Command}!Command@{Command}}
+\index{Command@{Command}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{Command()}{Command()}}
+{\footnotesize\ttfamily Command\+::\+Command (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{\mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$}]{room,  }\item[{\mbox{\hyperlink{classUsers}{Users}} $\ast$}]{users }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classCommand}{Command}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & Pointer to the target chat room \\
+\hline
+{\em user} & Pointer to the user who sent the message \\
+\hline
+{\em msg} & The message content to process \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}\label{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}} 
+\index{Command@{Command}!execute@{execute}}
+\index{execute@{execute}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual void Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method to execute the command. 
+
+This method must be implemented by derived classes to perform specific actions like sending messages or saving to history. 
+
+Implemented in \mbox{\hyperlink{classLogMessageCommand_a1522ccb9ad6916f76ef6fe720ffbdb8c}{Log\+Message\+Command}}, and \mbox{\hyperlink{classSendMessageCommand_ae6261a5ef02ead22e13d01ea5fc10e76}{Send\+Message\+Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Command_8h}{Command.\+h}}\item 
+Command.\+cpp\end{DoxyCompactItemize}

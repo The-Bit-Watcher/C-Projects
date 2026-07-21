@@ -1,0 +1,19 @@
+\hypertarget{SendMessageCommand_8h_source}{}\doxysection{Send\+Message\+Command.\+h}
+\mbox{\hyperlink{SendMessageCommand_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef SENDMESSAGECOMMAND\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define SENDMESSAGECOMMAND\_H}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Command_8h}{Command.h}}"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{classSendMessageCommand}{SendMessageCommand}} : \textcolor{keyword}{public} \mbox{\hyperlink{classCommand}{Command}} \{}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \mbox{\hyperlink{classSendMessageCommand_abb62ce1eaad3319185d1cb3b69a1d344}{SendMessageCommand}}(\mbox{\hyperlink{classChatRoom}{ChatRoom}}* \mbox{\hyperlink{classCommand_ac38d7713bb9660a23a752a2a2c938dd5}{room}}, \mbox{\hyperlink{classUsers}{Users}}* \mbox{\hyperlink{classCommand_afaaac0a861b0632822721717a8b833eb}{fromUser}}, \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classCommand_aefb89941a5b2b0b0648cf7b98bb37762}{message}});  \textcolor{comment}{// Fix parameter type}}
+\DoxyCodeLine{28    }
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSendMessageCommand_ae6261a5ef02ead22e13d01ea5fc10e76}{execute}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{36 \};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

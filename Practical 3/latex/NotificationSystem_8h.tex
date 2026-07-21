@@ -1,0 +1,36 @@
+\hypertarget{NotificationSystem_8h}{}\doxysection{Notification\+System.\+h File Reference}
+\label{NotificationSystem_8h}\index{NotificationSystem.h@{NotificationSystem.h}}
+
+
+Observer pattern implementation for real-\/time chat notifications.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for Notification\+System.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classNotificationObserver}{Notification\+Observer}}
+\begin{DoxyCompactList}\small\item\em Observer interface for notification recipients. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classNotificationSubject}{Notification\+Subject}}
+\begin{DoxyCompactList}\small\item\em Subject interface for notification management. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classChatNotificationSystem}{Chat\+Notification\+System}}
+\begin{DoxyCompactList}\small\item\em Concrete subject for chat system notifications. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classUserNotificationObserver}{User\+Notification\+Observer}}
+\begin{DoxyCompactList}\small\item\em Concrete observer for user notifications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Observer pattern implementation for real-\/time chat notifications. 
+
+\begin{DoxyAuthor}{Author}
+Your Name 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024
+\end{DoxyDate}
+Implements the Observer pattern to provide real-\/time notifications for chat system activities. \mbox{\hyperlink{classUsers}{Users}} can register as observers to receive notifications about messages, user joins/leaves, and other chat events. 

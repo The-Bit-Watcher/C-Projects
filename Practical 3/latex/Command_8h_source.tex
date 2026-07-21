@@ -1,0 +1,28 @@
+\hypertarget{Command_8h_source}{}\doxysection{Command.\+h}
+\mbox{\hyperlink{Command_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef COMMAND\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define COMMAND\_H}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{ChatRoom_8h}{ChatRoom.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Users_8h}{Users.h}}"{}}}
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{classChatRoom}{ChatRoom}};}
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classUsers}{Users}};}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{23 \textcolor{keyword}{class }\mbox{\hyperlink{classCommand}{Command}}\{}
+\DoxyCodeLine{24     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{25     \mbox{\hyperlink{classChatRoom}{ChatRoom}}* \mbox{\hyperlink{classCommand_ac38d7713bb9660a23a752a2a2c938dd5}{room}}; }
+\DoxyCodeLine{26     \mbox{\hyperlink{classUsers}{Users}}* \mbox{\hyperlink{classCommand_afaaac0a861b0632822721717a8b833eb}{fromUser}}; }
+\DoxyCodeLine{27     std::string \mbox{\hyperlink{classCommand_aefb89941a5b2b0b0648cf7b98bb37762}{message}}; }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{keyword}{public}:}
+\DoxyCodeLine{36     \mbox{\hyperlink{classCommand_a4d479fdc5c38a51a4f827fb6152ff793}{Command}}(\textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classCommand_aefb89941a5b2b0b0648cf7b98bb37762}{message}}, \mbox{\hyperlink{classChatRoom}{ChatRoom}}* \mbox{\hyperlink{classCommand_ac38d7713bb9660a23a752a2a2c938dd5}{room}}, \mbox{\hyperlink{classUsers}{Users}}* users);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{44     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{execute}}() = 0;}
+\DoxyCodeLine{45     \textcolor{keyword}{virtual} \mbox{\hyperlink{classCommand}{\string~Command}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{46 \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

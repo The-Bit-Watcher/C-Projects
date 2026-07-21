@@ -1,0 +1,33 @@
+\hypertarget{userIterator_8h_source}{}\doxysection{user\+Iterator.\+h}
+\mbox{\hyperlink{userIterator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef USERITERATOR\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define USERITERATOR\_H}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Users_8h}{Users.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{classuserIterator}{userIterator}}\{}
+\DoxyCodeLine{22 \textcolor{keyword}{private}:}
+\DoxyCodeLine{23     std::list<Users*>::iterator current;}
+\DoxyCodeLine{24     std::list<Users*>::iterator end;      }
+\DoxyCodeLine{25     std::list<Users*> userList;           }
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{32     \mbox{\hyperlink{classuserIterator_a87704748226a3a2d9e29607e21e2348f}{userIterator}}(\textcolor{keyword}{const} std::list<Users*>\& usersList);}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{38     \mbox{\hyperlink{classUsers}{Users}}* \mbox{\hyperlink{classuserIterator_a64ba68fcabba2472c95efbd895c396f2}{first}}();}
+\DoxyCodeLine{39     }
+\DoxyCodeLine{44     \mbox{\hyperlink{classUsers}{Users}}* \mbox{\hyperlink{classuserIterator_a5c4ab2eb1368a35bf42f34766051e9f3}{next}}();}
+\DoxyCodeLine{45     }
+\DoxyCodeLine{50     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classuserIterator_ad16b5d5362fff937376cb184d02c3e00}{isDone}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{51     }
+\DoxyCodeLine{56     \mbox{\hyperlink{classUsers}{Users}}* \mbox{\hyperlink{classuserIterator_af505adee2ed8c9d568a093389a211892}{currentItem}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{57     }
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} \mbox{\hyperlink{classuserIterator_a2c3a061addc4fb7f5b0bbe5ba76e8f35}{reset}}();}
+\DoxyCodeLine{62 \};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

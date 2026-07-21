@@ -1,0 +1,285 @@
+\hypertarget{classUsers}{}\doxysection{Users Class Reference}
+\label{classUsers}\index{Users@{Users}}
+
+
+Represents a user in the chat system with command invocation capabilities.  
+
+
+
+
+{\ttfamily \#include $<$Users.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUsers_a8d94d0e541778b6ac0fab4b4445165b7}{Users}} (std\+::string name\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classUsers}{Users}} object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classUsers_ad2371408cc7288e70dd57f20d2534835}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the user\textquotesingle{}s name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUsers_aed92ed0852076631b8d817b1135a43bc}{send}} (const std\+::string \&message, \mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$room)
+\begin{DoxyCompactList}\small\item\em Send a message to a specific chat room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUsers_a16fe0228e3e87f0b2c8bc592ba19f593}{join\+Room}} (\mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$room)
+\begin{DoxyCompactList}\small\item\em Join a chat room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUsers_a965f058fbe045f27627d3942ae42477d}{leave\+Room}} (\mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$room)
+\begin{DoxyCompactList}\small\item\em Leave a specific chat room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUsers_af8ddc2180898dd33424bef2f94e4325f}{leave\+All\+Rooms}} ()
+\begin{DoxyCompactList}\small\item\em Leave all chat rooms. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUsers_a0e45536cbf5529fc960d5dad600c65d4}\label{classUsers_a0e45536cbf5529fc960d5dad600c65d4}} 
+void {\bfseries send\+To\+Room} (const std\+::string \&message, \mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$room)
+\item 
+\mbox{\Hypertarget{classUsers_adb21d517d0e3a8e8fa9b5b77bd88930c}\label{classUsers_adb21d517d0e3a8e8fa9b5b77bd88930c}} 
+void {\bfseries send\+To\+All\+Rooms} (const std\+::string \&message)
+\item 
+bool \mbox{\hyperlink{classUsers_a7d2274acf9ad490b81b7a128b4bd3972}{is\+In\+Room}} (\mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$room) const
+\begin{DoxyCompactList}\small\item\em Check if user is in a specific room. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUsers_a693c4679995493baa4450cda8a546a2a}{get\+Room\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of rooms the user has joined. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUsers_a0599ae0d6632442cd03625186ba71d15}\label{classUsers_a0599ae0d6632442cd03625186ba71d15}} 
+void {\bfseries list\+Rooms} () const
+\item 
+void \mbox{\hyperlink{classUsers_a4846f1489f49dbc08b63c784622df06c}{receive}} (const std\+::string \&message, \mbox{\hyperlink{classUsers}{Users}} \&from\+User, \mbox{\hyperlink{classChatRoom}{Chat\+Room}} \&room)
+\begin{DoxyCompactList}\small\item\em Receive a message from another user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUsers_afa792552c0c96c79946fdc72d65f5bca}{add\+Command}} (\mbox{\hyperlink{classCommand}{Command}} $\ast$command)
+\begin{DoxyCompactList}\small\item\em Add a command to the execution queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUsers_aabafaa656ae27340b904c083b70b2d97}{execute\+All}} ()
+\begin{DoxyCompactList}\small\item\em Execute all commands in the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUsers_af7054315f432a9b21a9b245a2b9be553}{enable\+Notifications}} ()
+\begin{DoxyCompactList}\small\item\em Enable real-\/time notifications for this user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUsers_af487e67b8a001fc26ac68fa341a3cdd0}{disable\+Notifications}} ()
+\begin{DoxyCompactList}\small\item\em Disable real-\/time notifications for this user. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUsers_ab10d35aa0403a5b9735d4f1ea2095698}{are\+Notifications\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Check if notifications are enabled for this user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUsers_aad180ea5919ab361b9980c497d26078b}{handle\+Notification}} (const std\+::string \&message, const std\+::string \&room\+Name, const std\+::string \&user\+Name)
+\begin{DoxyCompactList}\small\item\em Handle incoming notification from the notification system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a user in the chat system with command invocation capabilities. 
+
+This class acts as the Invoker in the \mbox{\hyperlink{classCommand}{Command}} Pattern. It maintains a queue of commands and executes them in sequence when requested. \mbox{\hyperlink{classUsers}{Users}} can join multiple chat rooms and send messages to specific rooms. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUsers_a8d94d0e541778b6ac0fab4b4445165b7}\label{classUsers_a8d94d0e541778b6ac0fab4b4445165b7}} 
+\index{Users@{Users}!Users@{Users}}
+\index{Users@{Users}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{Users()}{Users()}}
+{\footnotesize\ttfamily Users\+::\+Users (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classUsers}{Users}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+\_\+} & The display name for the user \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUsers_afa792552c0c96c79946fdc72d65f5bca}\label{classUsers_afa792552c0c96c79946fdc72d65f5bca}} 
+\index{Users@{Users}!addCommand@{addCommand}}
+\index{addCommand@{addCommand}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{addCommand()}{addCommand()}}
+{\footnotesize\ttfamily void Users\+::add\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCommand}{Command}} $\ast$}]{command }\end{DoxyParamCaption})}
+
+
+
+Add a command to the execution queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & Pointer to the command to be added\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The \mbox{\hyperlink{classUsers}{Users}} object takes ownership of the command pointer 
+\end{DoxyNote}
+\mbox{\Hypertarget{classUsers_ab10d35aa0403a5b9735d4f1ea2095698}\label{classUsers_ab10d35aa0403a5b9735d4f1ea2095698}} 
+\index{Users@{Users}!areNotificationsEnabled@{areNotificationsEnabled}}
+\index{areNotificationsEnabled@{areNotificationsEnabled}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{areNotificationsEnabled()}{areNotificationsEnabled()}}
+{\footnotesize\ttfamily bool Users\+::are\+Notifications\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if notifications are enabled for this user. 
+
+\begin{DoxyReturn}{Returns}
+true if notifications are enabled, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsers_af487e67b8a001fc26ac68fa341a3cdd0}\label{classUsers_af487e67b8a001fc26ac68fa341a3cdd0}} 
+\index{Users@{Users}!disableNotifications@{disableNotifications}}
+\index{disableNotifications@{disableNotifications}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{disableNotifications()}{disableNotifications()}}
+{\footnotesize\ttfamily void Users\+::disable\+Notifications (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disable real-\/time notifications for this user. 
+
+Unregisters the user from the notification system and stops receiving notifications. \mbox{\Hypertarget{classUsers_af7054315f432a9b21a9b245a2b9be553}\label{classUsers_af7054315f432a9b21a9b245a2b9be553}} 
+\index{Users@{Users}!enableNotifications@{enableNotifications}}
+\index{enableNotifications@{enableNotifications}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{enableNotifications()}{enableNotifications()}}
+{\footnotesize\ttfamily void Users\+::enable\+Notifications (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enable real-\/time notifications for this user. 
+
+Registers the user as an observer with the notification system to receive notifications about chat activities. \mbox{\Hypertarget{classUsers_aabafaa656ae27340b904c083b70b2d97}\label{classUsers_aabafaa656ae27340b904c083b70b2d97}} 
+\index{Users@{Users}!executeAll@{executeAll}}
+\index{executeAll@{executeAll}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{executeAll()}{executeAll()}}
+{\footnotesize\ttfamily void Users\+::execute\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Execute all commands in the queue. 
+
+Iterates through the command queue and calls execute() on each command. Clears the queue after all commands have been executed. \mbox{\Hypertarget{classUsers_ad2371408cc7288e70dd57f20d2534835}\label{classUsers_ad2371408cc7288e70dd57f20d2534835}} 
+\index{Users@{Users}!getName@{getName}}
+\index{getName@{getName}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Users\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the user\textquotesingle{}s name. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The user\textquotesingle{}s display name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsers_a693c4679995493baa4450cda8a546a2a}\label{classUsers_a693c4679995493baa4450cda8a546a2a}} 
+\index{Users@{Users}!getRoomCount@{getRoomCount}}
+\index{getRoomCount@{getRoomCount}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{getRoomCount()}{getRoomCount()}}
+{\footnotesize\ttfamily int Users\+::get\+Room\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of rooms the user has joined. 
+
+\begin{DoxyReturn}{Returns}
+int Count of joined chat rooms 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsers_aad180ea5919ab361b9980c497d26078b}\label{classUsers_aad180ea5919ab361b9980c497d26078b}} 
+\index{Users@{Users}!handleNotification@{handleNotification}}
+\index{handleNotification@{handleNotification}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{handleNotification()}{handleNotification()}}
+{\footnotesize\ttfamily void Users\+::handle\+Notification (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{room\+Name,  }\item[{const std\+::string \&}]{user\+Name }\end{DoxyParamCaption})}
+
+
+
+Handle incoming notification from the notification system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The notification message content \\
+\hline
+{\em room\+Name} & The chat room where activity occurred \\
+\hline
+{\em user\+Name} & The user who triggered the notification\\
+\hline
+\end{DoxyParams}
+This method is called by the \mbox{\hyperlink{classUserNotificationObserver}{User\+Notification\+Observer}} when a notification is received. It displays the notification to the user. \mbox{\Hypertarget{classUsers_a7d2274acf9ad490b81b7a128b4bd3972}\label{classUsers_a7d2274acf9ad490b81b7a128b4bd3972}} 
+\index{Users@{Users}!isInRoom@{isInRoom}}
+\index{isInRoom@{isInRoom}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{isInRoom()}{isInRoom()}}
+{\footnotesize\ttfamily bool Users\+::is\+In\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$}]{room }\end{DoxyParamCaption}) const}
+
+
+
+Check if user is in a specific room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & Pointer to the chat room to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if user is in the room, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsers_a16fe0228e3e87f0b2c8bc592ba19f593}\label{classUsers_a16fe0228e3e87f0b2c8bc592ba19f593}} 
+\index{Users@{Users}!joinRoom@{joinRoom}}
+\index{joinRoom@{joinRoom}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{joinRoom()}{joinRoom()}}
+{\footnotesize\ttfamily void Users\+::join\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$}]{room }\end{DoxyParamCaption})}
+
+
+
+Join a chat room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & Pointer to the chat room to join\\
+\hline
+\end{DoxyParams}
+Adds the user to the specified chat room and registers them with the room\textquotesingle{}s user list. \mbox{\Hypertarget{classUsers_af8ddc2180898dd33424bef2f94e4325f}\label{classUsers_af8ddc2180898dd33424bef2f94e4325f}} 
+\index{Users@{Users}!leaveAllRooms@{leaveAllRooms}}
+\index{leaveAllRooms@{leaveAllRooms}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{leaveAllRooms()}{leaveAllRooms()}}
+{\footnotesize\ttfamily void Users\+::leave\+All\+Rooms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Leave all chat rooms. 
+
+Removes the user from all joined chat rooms and clears the internal room list. \mbox{\Hypertarget{classUsers_a965f058fbe045f27627d3942ae42477d}\label{classUsers_a965f058fbe045f27627d3942ae42477d}} 
+\index{Users@{Users}!leaveRoom@{leaveRoom}}
+\index{leaveRoom@{leaveRoom}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{leaveRoom()}{leaveRoom()}}
+{\footnotesize\ttfamily void Users\+::leave\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$}]{room }\end{DoxyParamCaption})}
+
+
+
+Leave a specific chat room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & Pointer to the chat room to leave\\
+\hline
+\end{DoxyParams}
+Removes the user from the specified chat room and updates the room\textquotesingle{}s user list. \mbox{\Hypertarget{classUsers_a4846f1489f49dbc08b63c784622df06c}\label{classUsers_a4846f1489f49dbc08b63c784622df06c}} 
+\index{Users@{Users}!receive@{receive}}
+\index{receive@{receive}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily void Users\+::receive (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{\mbox{\hyperlink{classUsers}{Users}} \&}]{from\+User,  }\item[{\mbox{\hyperlink{classChatRoom}{Chat\+Room}} \&}]{room }\end{DoxyParamCaption})}
+
+
+
+Receive a message from another user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The received message content \\
+\hline
+{\em from\+User} & Reference to the user who sent the message \\
+\hline
+{\em room} & Reference to the chat room where message was sent\\
+\hline
+\end{DoxyParams}
+This method is called by the \mbox{\hyperlink{classChatRoom}{Chat\+Room}} when a message is delivered to this user. It handles displaying the received message. \mbox{\Hypertarget{classUsers_aed92ed0852076631b8d817b1135a43bc}\label{classUsers_aed92ed0852076631b8d817b1135a43bc}} 
+\index{Users@{Users}!send@{send}}
+\index{send@{send}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily void Users\+::send (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{\mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$}]{room }\end{DoxyParamCaption})}
+
+
+
+Send a message to a specific chat room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message content to send \\
+\hline
+{\em room} & Pointer to the target chat room\\
+\hline
+\end{DoxyParams}
+Creates and executes \mbox{\hyperlink{classSendMessageCommand}{Send\+Message\+Command}} and \mbox{\hyperlink{classLogMessageCommand}{Log\+Message\+Command}} for the specified room using the \mbox{\hyperlink{classCommand}{Command}} Pattern. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Users_8h}{Users.\+h}}\item 
+Users.\+cpp\end{DoxyCompactItemize}

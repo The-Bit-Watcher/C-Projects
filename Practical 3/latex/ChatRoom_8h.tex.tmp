@@ -1,0 +1,34 @@
+\hypertarget{ChatRoom_8h}{}\doxysection{Chat\+Room.\+h File Reference}
+\label{ChatRoom_8h}\index{ChatRoom.h@{ChatRoom.h}}
+
+
+Chat room class managing users, messages, and history.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Users.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}user\+Iterator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Notification\+System.\+h\char`\"{}}\newline
+Include dependency graph for Chat\+Room.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classChatRoom}{Chat\+Room}}
+\begin{DoxyCompactList}\small\item\em Represents a chat room that manages users and message history. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Chat room class managing users, messages, and history. 
+
+\begin{DoxyAuthor}{Author}
+Shaun Marx 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/09-\/27 
+\end{DoxyDate}

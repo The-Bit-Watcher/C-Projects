@@ -1,0 +1,61 @@
+\hypertarget{ChatRoom_8h_source}{}\doxysection{Chat\+Room.\+h}
+\mbox{\hyperlink{ChatRoom_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef CHATROOM\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define CHATROOM\_H}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Users_8h}{Users.h}}"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{userIterator_8h}{userIterator.h}}"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{NotificationSystem_8h}{NotificationSystem.h}}"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{26 \textcolor{keyword}{class }\mbox{\hyperlink{classChatRoom}{ChatRoom}} \{}
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28     \mbox{\hyperlink{classChatRoom}{ChatRoom}}();}
+\DoxyCodeLine{33     \mbox{\hyperlink{classChatRoom}{ChatRoom}}(\textcolor{keyword}{const} std::string\& roomName);}
+\DoxyCodeLine{34     std::string getName() \textcolor{keyword}{const};}
+\DoxyCodeLine{35     \mbox{\hyperlink{classChatRoom}{\string~ChatRoom}}();}
+\DoxyCodeLine{36     }
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{classChatRoom_a3a8eb7ae921921c79536c97ed22199b3}{registerUser}}(\mbox{\hyperlink{classUsers}{Users}}* user\_);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{classChatRoom_aca3f2e8e820d88f11d27effcd9f0ec27}{sendMessage}}(\textcolor{keyword}{const} std::string message, \mbox{\hyperlink{classUsers}{Users}}* fromUser);}
+\DoxyCodeLine{55     }
+\DoxyCodeLine{64     \textcolor{keywordtype}{void} \mbox{\hyperlink{classChatRoom_a52a6808e2ec60431181d2e7c8aacd518}{saveMessage}}(\textcolor{keyword}{const} std::string message, \mbox{\hyperlink{classUsers}{Users}}* fromUser);}
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} removeUser(\mbox{\hyperlink{classUsers}{Users}}* user\_);}
+\DoxyCodeLine{66     }
+\DoxyCodeLine{67     std::string getCurrentTime();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} \mbox{\hyperlink{classChatRoom_a7155a7bd565dd34965f4009568d0d0dc}{displayChatHistory}}();}
+\DoxyCodeLine{76     }
+\DoxyCodeLine{82     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classChatRoom_adfd74d7bdc83341adbe6eeb55a65da7e}{hasUser}}(\mbox{\hyperlink{classUsers}{Users}}* user\_) \textcolor{keyword}{const};}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{88     \mbox{\hyperlink{classuserIterator}{userIterator}} \mbox{\hyperlink{classChatRoom_a804eb1479ed4a6edfab9d0492a90916d}{createIterator}}();}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{94     \mbox{\hyperlink{classUsers}{Users}}* \mbox{\hyperlink{classChatRoom_a22432189bbceaa5d84295ffcfba9a864}{getFirstUser}}();}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{101     \mbox{\hyperlink{classUsers}{Users}}* \mbox{\hyperlink{classChatRoom_a1e62cf60bb6858371c9bcba2156a67c1}{getNextUser}}(\mbox{\hyperlink{classUsers}{Users}}* currentUser);}
+\DoxyCodeLine{102     }
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104     \mbox{\hyperlink{classUsers}{Users}}* getUserAt();}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{111     \textcolor{keywordtype}{void} \mbox{\hyperlink{classChatRoom_ad26a94703337b47002037007c4300156}{all}}();}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{117     \textcolor{keywordtype}{int} \mbox{\hyperlink{classChatRoom_a679c08869b4c4e567eb5245c7568f0ec}{userCount}}();}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119      }
+\DoxyCodeLine{124     std::string \mbox{\hyperlink{classChatRoom_ad57e1243324a0457b05938b5338ac59f}{getMessageAt}}(\textcolor{keywordtype}{int} position);}
+\DoxyCodeLine{125     \textcolor{keywordtype}{int} getMessageCount();}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127 \textcolor{keyword}{private}:}
+\DoxyCodeLine{128     std::list<Users*> user; }
+\DoxyCodeLine{129     std::vector<std::string> chatHistory; }
+\DoxyCodeLine{130     std::string name;}
+\DoxyCodeLine{131 \};}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// CHATROOM\_H}}
+
+\end{DoxyCode}

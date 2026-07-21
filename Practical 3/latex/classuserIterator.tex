@@ -1,0 +1,111 @@
+\hypertarget{classuserIterator}{}\doxysection{user\+Iterator Class Reference}
+\label{classuserIterator}\index{userIterator@{userIterator}}
+
+
+Iterator for traversing users in a \mbox{\hyperlink{classChatRoom}{Chat\+Room}} using std\+::list.  
+
+
+
+
+{\ttfamily \#include $<$user\+Iterator.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuserIterator_a87704748226a3a2d9e29607e21e2348f}{user\+Iterator}} (const std\+::list$<$ \mbox{\hyperlink{classUsers}{Users}} $\ast$ $>$ \&users\+List)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classuserIterator}{user\+Iterator}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUsers}{Users}} $\ast$ \mbox{\hyperlink{classuserIterator_a64ba68fcabba2472c95efbd895c396f2}{first}} ()
+\begin{DoxyCompactList}\small\item\em Get the first user in the collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUsers}{Users}} $\ast$ \mbox{\hyperlink{classuserIterator_a5c4ab2eb1368a35bf42f34766051e9f3}{next}} ()
+\begin{DoxyCompactList}\small\item\em Get the next user in the collection. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classuserIterator_ad16b5d5362fff937376cb184d02c3e00}{is\+Done}} () const
+\begin{DoxyCompactList}\small\item\em Check if iteration is complete. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUsers}{Users}} $\ast$ \mbox{\hyperlink{classuserIterator_af505adee2ed8c9d568a093389a211892}{current\+Item}} () const
+\begin{DoxyCompactList}\small\item\em Get the current user in iteration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classuserIterator_a2c3a061addc4fb7f5b0bbe5ba76e8f35}\label{classuserIterator_a2c3a061addc4fb7f5b0bbe5ba76e8f35}} 
+void {\bfseries reset} ()
+\begin{DoxyCompactList}\small\item\em Reset iterator to beginning. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Iterator for traversing users in a \mbox{\hyperlink{classChatRoom}{Chat\+Room}} using std\+::list. 
+
+Implements the Iterator Pattern to provide a uniform interface for traversing the collection of users in a chat room without exposing the underlying list implementation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classuserIterator_a87704748226a3a2d9e29607e21e2348f}\label{classuserIterator_a87704748226a3a2d9e29607e21e2348f}} 
+\index{userIterator@{userIterator}!userIterator@{userIterator}}
+\index{userIterator@{userIterator}!userIterator@{userIterator}}
+\doxysubsubsection{\texorpdfstring{userIterator()}{userIterator()}}
+{\footnotesize\ttfamily user\+Iterator\+::user\+Iterator (\begin{DoxyParamCaption}\item[{const std\+::list$<$ \mbox{\hyperlink{classUsers}{Users}} $\ast$ $>$ \&}]{users\+List }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classuserIterator}{user\+Iterator}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em users\+List} & Reference to the list of users from \mbox{\hyperlink{classChatRoom}{Chat\+Room}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classuserIterator_af505adee2ed8c9d568a093389a211892}\label{classuserIterator_af505adee2ed8c9d568a093389a211892}} 
+\index{userIterator@{userIterator}!currentItem@{currentItem}}
+\index{currentItem@{currentItem}!userIterator@{userIterator}}
+\doxysubsubsection{\texorpdfstring{currentItem()}{currentItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUsers}{Users}} $\ast$ user\+Iterator\+::current\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current user in iteration. 
+
+\begin{DoxyReturn}{Returns}
+Users$\ast$ Pointer to current user, or nullptr if iteration is done 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classuserIterator_a64ba68fcabba2472c95efbd895c396f2}\label{classuserIterator_a64ba68fcabba2472c95efbd895c396f2}} 
+\index{userIterator@{userIterator}!first@{first}}
+\index{first@{first}!userIterator@{userIterator}}
+\doxysubsubsection{\texorpdfstring{first()}{first()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUsers}{Users}} $\ast$ user\+Iterator\+::first (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the first user in the collection. 
+
+\begin{DoxyReturn}{Returns}
+Users$\ast$ Pointer to the first user, or nullptr if empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classuserIterator_ad16b5d5362fff937376cb184d02c3e00}\label{classuserIterator_ad16b5d5362fff937376cb184d02c3e00}} 
+\index{userIterator@{userIterator}!isDone@{isDone}}
+\index{isDone@{isDone}!userIterator@{userIterator}}
+\doxysubsubsection{\texorpdfstring{isDone()}{isDone()}}
+{\footnotesize\ttfamily bool user\+Iterator\+::is\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if iteration is complete. 
+
+\begin{DoxyReturn}{Returns}
+true if all users have been iterated, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classuserIterator_a5c4ab2eb1368a35bf42f34766051e9f3}\label{classuserIterator_a5c4ab2eb1368a35bf42f34766051e9f3}} 
+\index{userIterator@{userIterator}!next@{next}}
+\index{next@{next}!userIterator@{userIterator}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUsers}{Users}} $\ast$ user\+Iterator\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the next user in the collection. 
+
+\begin{DoxyReturn}{Returns}
+Users$\ast$ Pointer to the next user, or nullptr if at end 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{userIterator_8h}{user\+Iterator.\+h}}\item 
+user\+Iterator.\+cpp\end{DoxyCompactItemize}

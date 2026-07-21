@@ -1,0 +1,93 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Test program for Chat System with \mbox{\hyperlink{classCommand}{Command}} and Iterator patterns.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Users.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Chat\+Room.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Command.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a05900f0f1b60ad35d82ffea0f57b529f}{test\+Command\+Pattern}} ()
+\begin{DoxyCompactList}\small\item\em Test the command pattern functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a63775a677882f5349ce2486d97995770}{test\+User\+Iterator}} (\mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$room)
+\begin{DoxyCompactList}\small\item\em Test the iterator functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a129e140bd665935067687d49107f2fdc}{test\+Multiple\+Rooms}} ()
+\begin{DoxyCompactList}\small\item\em Test multiple room functionality. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function -\/ entry point of the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Test program for Chat System with \mbox{\hyperlink{classCommand}{Command}} and Iterator patterns. 
+
+\begin{DoxyAuthor}{Author}
+Your Name 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024
+\end{DoxyDate}
+This program demonstrates the functionality of the chat system including\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classCommand}{Command}} Pattern for message operations
+\item Iterator Pattern for user traversal
+\item Multiple room support for users
+\item Message history management 
+\end{DoxyItemize}
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function -\/ entry point of the program. 
+
+\begin{DoxyReturn}{Returns}
+int Exit status (0 for success)
+\end{DoxyReturn}
+Runs all test functions to demonstrate the chat system functionality. \mbox{\Hypertarget{main_8cpp_a05900f0f1b60ad35d82ffea0f57b529f}\label{main_8cpp_a05900f0f1b60ad35d82ffea0f57b529f}} 
+\index{main.cpp@{main.cpp}!testCommandPattern@{testCommandPattern}}
+\index{testCommandPattern@{testCommandPattern}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{testCommandPattern()}{testCommandPattern()}}
+{\footnotesize\ttfamily void test\+Command\+Pattern (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test the command pattern functionality. 
+
+Demonstrates sending messages using the \mbox{\hyperlink{classCommand}{Command}} Pattern with both \mbox{\hyperlink{classSendMessageCommand}{Send\+Message\+Command}} and \mbox{\hyperlink{classLogMessageCommand}{Log\+Message\+Command}}. \mbox{\Hypertarget{main_8cpp_a129e140bd665935067687d49107f2fdc}\label{main_8cpp_a129e140bd665935067687d49107f2fdc}} 
+\index{main.cpp@{main.cpp}!testMultipleRooms@{testMultipleRooms}}
+\index{testMultipleRooms@{testMultipleRooms}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{testMultipleRooms()}{testMultipleRooms()}}
+{\footnotesize\ttfamily void test\+Multiple\+Rooms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test multiple room functionality. 
+
+Demonstrates users joining multiple rooms and sending messages to specific rooms or broadcasting to all rooms. \mbox{\Hypertarget{main_8cpp_a63775a677882f5349ce2486d97995770}\label{main_8cpp_a63775a677882f5349ce2486d97995770}} 
+\index{main.cpp@{main.cpp}!testUserIterator@{testUserIterator}}
+\index{testUserIterator@{testUserIterator}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{testUserIterator()}{testUserIterator()}}
+{\footnotesize\ttfamily void test\+User\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$}]{room }\end{DoxyParamCaption})}
+
+
+
+Test the iterator functionality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & Pointer to the chat room to test\\
+\hline
+\end{DoxyParams}
+Demonstrates using the \mbox{\hyperlink{classuserIterator}{user\+Iterator}} to traverse through all users in a chat room. 

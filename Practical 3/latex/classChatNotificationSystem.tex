@@ -1,0 +1,137 @@
+\hypertarget{classChatNotificationSystem}{}\doxysection{Chat\+Notification\+System Class Reference}
+\label{classChatNotificationSystem}\index{ChatNotificationSystem@{ChatNotificationSystem}}
+
+
+Concrete subject for chat system notifications.  
+
+
+
+
+{\ttfamily \#include $<$Notification\+System.\+h$>$}
+
+
+
+Inheritance diagram for Chat\+Notification\+System\+:
+% FIG 0
+
+
+Collaboration diagram for Chat\+Notification\+System\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classChatNotificationSystem_ae5fc8e97dff458a731b434da83084344}{register\+Observer}} (\mbox{\hyperlink{classNotificationObserver}{Notification\+Observer}} $\ast$observer) override
+\begin{DoxyCompactList}\small\item\em Register an observer to receive notifications. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classChatNotificationSystem_a7b33d33c3dffa99bf70cc8eaf3da39ba}{remove\+Observer}} (\mbox{\hyperlink{classNotificationObserver}{Notification\+Observer}} $\ast$observer) override
+\begin{DoxyCompactList}\small\item\em Remove an observer from notification list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classChatNotificationSystem_a5ef2d51a74bb6743243c99012c6231a2}{notify\+Observers}} (const std\+::string \&message, const std\+::string \&room\+Name, const std\+::string \&user\+Name) override
+\begin{DoxyCompactList}\small\item\em Notify all registered observers about chat activity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classChatNotificationSystem}{Chat\+Notification\+System}} $\ast$ \mbox{\hyperlink{classChatNotificationSystem_aac95566bb52fda70ab6014dcb99f74a8}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the singleton instance of notification system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete subject for chat system notifications. 
+
+Singleton class that manages notification observers and distributes notifications about chat activities. Implements the Subject role in the Observer pattern. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classChatNotificationSystem_aac95566bb52fda70ab6014dcb99f74a8}\label{classChatNotificationSystem_aac95566bb52fda70ab6014dcb99f74a8}} 
+\index{ChatNotificationSystem@{ChatNotificationSystem}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!ChatNotificationSystem@{ChatNotificationSystem}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classChatNotificationSystem}{Chat\+Notification\+System}} $\ast$ Chat\+Notification\+System\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the singleton instance of notification system. 
+
+\begin{DoxyReturn}{Returns}
+Chat\+Notification\+System$\ast$ Pointer to the singleton instance
+\end{DoxyReturn}
+Implements Singleton pattern to ensure only one instance exists throughout the application.
+
+\begin{DoxyReturn}{Returns}
+Chat\+Notification\+System$\ast$ Pointer to singleton instance
+\end{DoxyReturn}
+Implements lazy initialization for the singleton pattern. \mbox{\Hypertarget{classChatNotificationSystem_a5ef2d51a74bb6743243c99012c6231a2}\label{classChatNotificationSystem_a5ef2d51a74bb6743243c99012c6231a2}} 
+\index{ChatNotificationSystem@{ChatNotificationSystem}!notifyObservers@{notifyObservers}}
+\index{notifyObservers@{notifyObservers}!ChatNotificationSystem@{ChatNotificationSystem}}
+\doxysubsubsection{\texorpdfstring{notifyObservers()}{notifyObservers()}}
+{\footnotesize\ttfamily void Chat\+Notification\+System\+::notify\+Observers (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{room\+Name,  }\item[{const std\+::string \&}]{user\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Notify all registered observers about chat activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The notification message content \\
+\hline
+{\em room\+Name} & The chat room where activity occurred \\
+\hline
+{\em user\+Name} & The user who triggered the notification\\
+\hline
+\end{DoxyParams}
+Prevents re-\/entrancy to avoid infinite notification loops.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The notification message content \\
+\hline
+{\em room\+Name} & The chat room where activity occurred \\
+\hline
+{\em user\+Name} & The user who triggered the notification\\
+\hline
+\end{DoxyParams}
+Uses a re-\/entrancy guard to prevent infinite notification loops that could occur if notifications trigger further notifications. 
+
+Implements \mbox{\hyperlink{classNotificationSubject_a2ba9c9311d3b31318ade972891fb8426}{Notification\+Subject}}.
+
+\mbox{\Hypertarget{classChatNotificationSystem_ae5fc8e97dff458a731b434da83084344}\label{classChatNotificationSystem_ae5fc8e97dff458a731b434da83084344}} 
+\index{ChatNotificationSystem@{ChatNotificationSystem}!registerObserver@{registerObserver}}
+\index{registerObserver@{registerObserver}!ChatNotificationSystem@{ChatNotificationSystem}}
+\doxysubsubsection{\texorpdfstring{registerObserver()}{registerObserver()}}
+{\footnotesize\ttfamily void Chat\+Notification\+System\+::register\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNotificationObserver}{Notification\+Observer}} $\ast$}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Register an observer to receive notifications. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & Pointer to the observer to register \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classNotificationSubject_a53a5219c0947490dd94bd2f2f931bcc1}{Notification\+Subject}}.
+
+\mbox{\Hypertarget{classChatNotificationSystem_a7b33d33c3dffa99bf70cc8eaf3da39ba}\label{classChatNotificationSystem_a7b33d33c3dffa99bf70cc8eaf3da39ba}} 
+\index{ChatNotificationSystem@{ChatNotificationSystem}!removeObserver@{removeObserver}}
+\index{removeObserver@{removeObserver}!ChatNotificationSystem@{ChatNotificationSystem}}
+\doxysubsubsection{\texorpdfstring{removeObserver()}{removeObserver()}}
+{\footnotesize\ttfamily void Chat\+Notification\+System\+::remove\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNotificationObserver}{Notification\+Observer}} $\ast$}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Remove an observer from notification list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & Pointer to the observer to remove \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classNotificationSubject_ac07dfea6fe046d3a736a87b6a41b5163}{Notification\+Subject}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{NotificationSystem_8h}{Notification\+System.\+h}}\item 
+\mbox{\hyperlink{NotificationSystem_8cpp}{Notification\+System.\+cpp}}\end{DoxyCompactItemize}

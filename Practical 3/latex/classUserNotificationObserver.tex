@@ -1,0 +1,94 @@
+\hypertarget{classUserNotificationObserver}{}\doxysection{User\+Notification\+Observer Class Reference}
+\label{classUserNotificationObserver}\index{UserNotificationObserver@{UserNotificationObserver}}
+
+
+Concrete observer for user notifications.  
+
+
+
+
+{\ttfamily \#include $<$Notification\+System.\+h$>$}
+
+
+
+Inheritance diagram for User\+Notification\+Observer\+:
+% FIG 0
+
+
+Collaboration diagram for User\+Notification\+Observer\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUserNotificationObserver_a4843ef10641584fe2afcb22ec3c77420}{User\+Notification\+Observer}} (\mbox{\hyperlink{classUsers}{Users}} $\ast$user\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construct a new User Notification Observer object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUserNotificationObserver_a3e04d3ad821276ce987f375c392e9e56}{update}} (const std\+::string \&message, const std\+::string \&room\+Name, const std\+::string \&user\+Name) override
+\begin{DoxyCompactList}\small\item\em Receive and process notification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete observer for user notifications. 
+
+Observes chat system activities and notifies specific users about relevant events. Implements the Observer role in the Observer pattern. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUserNotificationObserver_a4843ef10641584fe2afcb22ec3c77420}\label{classUserNotificationObserver_a4843ef10641584fe2afcb22ec3c77420}} 
+\index{UserNotificationObserver@{UserNotificationObserver}!UserNotificationObserver@{UserNotificationObserver}}
+\index{UserNotificationObserver@{UserNotificationObserver}!UserNotificationObserver@{UserNotificationObserver}}
+\doxysubsubsection{\texorpdfstring{UserNotificationObserver()}{UserNotificationObserver()}}
+{\footnotesize\ttfamily User\+Notification\+Observer\+::\+User\+Notification\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUsers}{Users}} $\ast$}]{user\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Construct a new User Notification Observer object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+\_\+} & Pointer to the user who will receive notifications \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUserNotificationObserver_a3e04d3ad821276ce987f375c392e9e56}\label{classUserNotificationObserver_a3e04d3ad821276ce987f375c392e9e56}} 
+\index{UserNotificationObserver@{UserNotificationObserver}!update@{update}}
+\index{update@{update}!UserNotificationObserver@{UserNotificationObserver}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void User\+Notification\+Observer\+::update (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{room\+Name,  }\item[{const std\+::string \&}]{user\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Receive and process notification. 
+
+Receive and forward notification to user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The notification message content \\
+\hline
+{\em room\+Name} & The chat room where activity occurred \\
+\hline
+{\em user\+Name} & The user who triggered the notification\\
+\hline
+\end{DoxyParams}
+Forwards the notification to the associated user for handling.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The notification message content \\
+\hline
+{\em room\+Name} & The chat room where activity occurred \\
+\hline
+{\em user\+Name} & The user who triggered the notification\\
+\hline
+\end{DoxyParams}
+Forwards the notification to the user\textquotesingle{}s handle\+Notification method for actual processing and display. 
+
+Implements \mbox{\hyperlink{classNotificationObserver_ab83151ebf01e84cb648a29dadf03b6e5}{Notification\+Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{NotificationSystem_8h}{Notification\+System.\+h}}\item 
+\mbox{\hyperlink{NotificationSystem_8cpp}{Notification\+System.\+cpp}}\end{DoxyCompactItemize}

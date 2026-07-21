@@ -1,0 +1,59 @@
+\hypertarget{classNotificationObserver}{}\doxysection{Notification\+Observer Class Reference}
+\label{classNotificationObserver}\index{NotificationObserver@{NotificationObserver}}
+
+
+Observer interface for notification recipients.  
+
+
+
+
+{\ttfamily \#include $<$Notification\+System.\+h$>$}
+
+
+
+Inheritance diagram for Notification\+Observer\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNotificationObserver_a72a10213ed2587e46374a3d06df6c64b}\label{classNotificationObserver_a72a10213ed2587e46374a3d06df6c64b}} 
+virtual {\bfseries $\sim$\+Notification\+Observer} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper cleanup. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classNotificationObserver_ab83151ebf01e84cb648a29dadf03b6e5}{update}} (const std\+::string \&message, const std\+::string \&room\+Name, const std\+::string \&user\+Name)=0
+\begin{DoxyCompactList}\small\item\em Receive notification about chat activity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Observer interface for notification recipients. 
+
+Defines the contract for objects that want to receive notifications from the chat system. Concrete observers must implement the update method. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNotificationObserver_ab83151ebf01e84cb648a29dadf03b6e5}\label{classNotificationObserver_ab83151ebf01e84cb648a29dadf03b6e5}} 
+\index{NotificationObserver@{NotificationObserver}!update@{update}}
+\index{update@{update}!NotificationObserver@{NotificationObserver}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Notification\+Observer\+::update (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{room\+Name,  }\item[{const std\+::string \&}]{user\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Receive notification about chat activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The notification message content \\
+\hline
+{\em room\+Name} & The name of the chat room where activity occurred \\
+\hline
+{\em user\+Name} & The name of the user who triggered the notification \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classUserNotificationObserver_a3e04d3ad821276ce987f375c392e9e56}{User\+Notification\+Observer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{NotificationSystem_8h}{Notification\+System.\+h}}\end{DoxyCompactItemize}

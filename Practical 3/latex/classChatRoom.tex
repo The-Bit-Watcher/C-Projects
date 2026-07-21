@@ -1,0 +1,242 @@
+\hypertarget{classChatRoom}{}\doxysection{Chat\+Room Class Reference}
+\label{classChatRoom}\index{ChatRoom@{ChatRoom}}
+
+
+Represents a chat room that manages users and message history.  
+
+
+
+
+{\ttfamily \#include $<$Chat\+Room.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classChatRoom_a5bb9f56c76f242d135102fb2980ab100}{Chat\+Room}} (const std\+::string \&room\+Name)
+\begin{DoxyCompactList}\small\item\em Construct a new Chat Room object with a name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classChatRoom_a8e1f3b4f5ebc9ee213d10996f1caf105}\label{classChatRoom_a8e1f3b4f5ebc9ee213d10996f1caf105}} 
+std\+::string {\bfseries get\+Name} () const
+\item 
+void \mbox{\hyperlink{classChatRoom_a3a8eb7ae921921c79536c97ed22199b3}{register\+User}} (\mbox{\hyperlink{classUsers}{Users}} $\ast$user\+\_\+)
+\begin{DoxyCompactList}\small\item\em Register a new user to the chat room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classChatRoom_aca3f2e8e820d88f11d27effcd9f0ec27}{send\+Message}} (const std\+::string message, \mbox{\hyperlink{classUsers}{Users}} $\ast$from\+User)
+\begin{DoxyCompactList}\small\item\em Send a message to all users in the room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classChatRoom_a52a6808e2ec60431181d2e7c8aacd518}{save\+Message}} (const std\+::string message, \mbox{\hyperlink{classUsers}{Users}} $\ast$from\+User)
+\begin{DoxyCompactList}\small\item\em Save a message to the chat room\textquotesingle{}s history. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classChatRoom_a866f5fca4ffdea9f24fa518ee0c93449}\label{classChatRoom_a866f5fca4ffdea9f24fa518ee0c93449}} 
+void {\bfseries remove\+User} (\mbox{\hyperlink{classUsers}{Users}} $\ast$user\+\_\+)
+\item 
+\mbox{\Hypertarget{classChatRoom_a5354ae4f1728b4f0dc73a532601a6612}\label{classChatRoom_a5354ae4f1728b4f0dc73a532601a6612}} 
+std\+::string {\bfseries get\+Current\+Time} ()
+\item 
+void \mbox{\hyperlink{classChatRoom_a7155a7bd565dd34965f4009568d0d0dc}{display\+Chat\+History}} ()
+\begin{DoxyCompactList}\small\item\em Display the chat history. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classChatRoom_adfd74d7bdc83341adbe6eeb55a65da7e}{has\+User}} (\mbox{\hyperlink{classUsers}{Users}} $\ast$user\+\_\+) const
+\begin{DoxyCompactList}\small\item\em Check if a user is registered in this room. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuserIterator}{user\+Iterator}} \mbox{\hyperlink{classChatRoom_a804eb1479ed4a6edfab9d0492a90916d}{create\+Iterator}} ()
+\begin{DoxyCompactList}\small\item\em Create an iterator for users in this room. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUsers}{Users}} $\ast$ \mbox{\hyperlink{classChatRoom_a22432189bbceaa5d84295ffcfba9a864}{get\+First\+User}} ()
+\begin{DoxyCompactList}\small\item\em Get the first user in the room. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUsers}{Users}} $\ast$ \mbox{\hyperlink{classChatRoom_a1e62cf60bb6858371c9bcba2156a67c1}{get\+Next\+User}} (\mbox{\hyperlink{classUsers}{Users}} $\ast$current\+User)
+\begin{DoxyCompactList}\small\item\em Get the next user after the current one. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classChatRoom_ab94e0d77e1201b4be230fec40e5573e9}\label{classChatRoom_ab94e0d77e1201b4be230fec40e5573e9}} 
+\mbox{\hyperlink{classUsers}{Users}} $\ast$ {\bfseries get\+User\+At} ()
+\item 
+void \mbox{\hyperlink{classChatRoom_ad26a94703337b47002037007c4300156}{all}} ()
+\begin{DoxyCompactList}\small\item\em Display all users in the room. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classChatRoom_a679c08869b4c4e567eb5245c7568f0ec}{user\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of users in the room. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classChatRoom_ad57e1243324a0457b05938b5338ac59f}{get\+Message\+At}} (int position)
+\begin{DoxyCompactList}\small\item\em Get the number of messages in chat history. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classChatRoom_a356979045963c9e21de3fe6786cee496}\label{classChatRoom_a356979045963c9e21de3fe6786cee496}} 
+int {\bfseries get\+Message\+Count} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a chat room that manages users and message history. 
+
+This class acts as the Receiver in the \mbox{\hyperlink{classCommand}{Command}} Pattern. It provides methods for message distribution, history management, user administration, and supports iteration over users. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classChatRoom_a5bb9f56c76f242d135102fb2980ab100}\label{classChatRoom_a5bb9f56c76f242d135102fb2980ab100}} 
+\index{ChatRoom@{ChatRoom}!ChatRoom@{ChatRoom}}
+\index{ChatRoom@{ChatRoom}!ChatRoom@{ChatRoom}}
+\doxysubsubsection{\texorpdfstring{ChatRoom()}{ChatRoom()}}
+{\footnotesize\ttfamily Chat\+Room\+::\+Chat\+Room (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{room\+Name }\end{DoxyParamCaption})}
+
+
+
+Construct a new Chat Room object with a name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room\+Name} & The name of the chat room \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classChatRoom_ad26a94703337b47002037007c4300156}\label{classChatRoom_ad26a94703337b47002037007c4300156}} 
+\index{ChatRoom@{ChatRoom}!all@{all}}
+\index{all@{all}!ChatRoom@{ChatRoom}}
+\doxysubsubsection{\texorpdfstring{all()}{all()}}
+{\footnotesize\ttfamily void Chat\+Room\+::all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Display all users in the room. 
+
+Prints a list of all users currently registered in this chat room. \mbox{\Hypertarget{classChatRoom_a804eb1479ed4a6edfab9d0492a90916d}\label{classChatRoom_a804eb1479ed4a6edfab9d0492a90916d}} 
+\index{ChatRoom@{ChatRoom}!createIterator@{createIterator}}
+\index{createIterator@{createIterator}!ChatRoom@{ChatRoom}}
+\doxysubsubsection{\texorpdfstring{createIterator()}{createIterator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuserIterator}{user\+Iterator}} Chat\+Room\+::create\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create an iterator for users in this room. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classuserIterator}{user\+Iterator}} Iterator object for user traversal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classChatRoom_a7155a7bd565dd34965f4009568d0d0dc}\label{classChatRoom_a7155a7bd565dd34965f4009568d0d0dc}} 
+\index{ChatRoom@{ChatRoom}!displayChatHistory@{displayChatHistory}}
+\index{displayChatHistory@{displayChatHistory}!ChatRoom@{ChatRoom}}
+\doxysubsubsection{\texorpdfstring{displayChatHistory()}{displayChatHistory()}}
+{\footnotesize\ttfamily void Chat\+Room\+::display\+Chat\+History (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Display the chat history. 
+
+Prints all messages in the chat history with their timestamps and sender information. \mbox{\Hypertarget{classChatRoom_a22432189bbceaa5d84295ffcfba9a864}\label{classChatRoom_a22432189bbceaa5d84295ffcfba9a864}} 
+\index{ChatRoom@{ChatRoom}!getFirstUser@{getFirstUser}}
+\index{getFirstUser@{getFirstUser}!ChatRoom@{ChatRoom}}
+\doxysubsubsection{\texorpdfstring{getFirstUser()}{getFirstUser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUsers}{Users}} $\ast$ Chat\+Room\+::get\+First\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the first user in the room. 
+
+\begin{DoxyReturn}{Returns}
+Users$\ast$ Pointer to the first user, or nullptr if empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classChatRoom_ad57e1243324a0457b05938b5338ac59f}\label{classChatRoom_ad57e1243324a0457b05938b5338ac59f}} 
+\index{ChatRoom@{ChatRoom}!getMessageAt@{getMessageAt}}
+\index{getMessageAt@{getMessageAt}!ChatRoom@{ChatRoom}}
+\doxysubsubsection{\texorpdfstring{getMessageAt()}{getMessageAt()}}
+{\footnotesize\ttfamily std\+::string Chat\+Room\+::get\+Message\+At (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Get the number of messages in chat history. 
+
+\begin{DoxyReturn}{Returns}
+int Count of messages in history 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classChatRoom_a1e62cf60bb6858371c9bcba2156a67c1}\label{classChatRoom_a1e62cf60bb6858371c9bcba2156a67c1}} 
+\index{ChatRoom@{ChatRoom}!getNextUser@{getNextUser}}
+\index{getNextUser@{getNextUser}!ChatRoom@{ChatRoom}}
+\doxysubsubsection{\texorpdfstring{getNextUser()}{getNextUser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUsers}{Users}} $\ast$ Chat\+Room\+::get\+Next\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUsers}{Users}} $\ast$}]{current\+User }\end{DoxyParamCaption})}
+
+
+
+Get the next user after the current one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+User} & Pointer to the current user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Users$\ast$ Pointer to the next user, or nullptr if at end 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classChatRoom_adfd74d7bdc83341adbe6eeb55a65da7e}\label{classChatRoom_adfd74d7bdc83341adbe6eeb55a65da7e}} 
+\index{ChatRoom@{ChatRoom}!hasUser@{hasUser}}
+\index{hasUser@{hasUser}!ChatRoom@{ChatRoom}}
+\doxysubsubsection{\texorpdfstring{hasUser()}{hasUser()}}
+{\footnotesize\ttfamily bool Chat\+Room\+::has\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUsers}{Users}} $\ast$}]{user\+\_\+ }\end{DoxyParamCaption}) const}
+
+
+
+Check if a user is registered in this room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+\_\+} & Pointer to the user to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if user is in the room, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classChatRoom_a3a8eb7ae921921c79536c97ed22199b3}\label{classChatRoom_a3a8eb7ae921921c79536c97ed22199b3}} 
+\index{ChatRoom@{ChatRoom}!registerUser@{registerUser}}
+\index{registerUser@{registerUser}!ChatRoom@{ChatRoom}}
+\doxysubsubsection{\texorpdfstring{registerUser()}{registerUser()}}
+{\footnotesize\ttfamily void Chat\+Room\+::register\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUsers}{Users}} $\ast$}]{user\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Register a new user to the chat room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+\_\+} & Pointer to the user to be registered\\
+\hline
+\end{DoxyParams}
+Adds the user to the room\textquotesingle{}s user list, allowing them to send and receive messages in this room. \mbox{\Hypertarget{classChatRoom_a52a6808e2ec60431181d2e7c8aacd518}\label{classChatRoom_a52a6808e2ec60431181d2e7c8aacd518}} 
+\index{ChatRoom@{ChatRoom}!saveMessage@{saveMessage}}
+\index{saveMessage@{saveMessage}!ChatRoom@{ChatRoom}}
+\doxysubsubsection{\texorpdfstring{saveMessage()}{saveMessage()}}
+{\footnotesize\ttfamily void Chat\+Room\+::save\+Message (\begin{DoxyParamCaption}\item[{const std\+::string}]{message,  }\item[{\mbox{\hyperlink{classUsers}{Users}} $\ast$}]{from\+User }\end{DoxyParamCaption})}
+
+
+
+Save a message to the chat room\textquotesingle{}s history. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message content to save \\
+\hline
+{\em from\+User} & Pointer to the user who sent the message\\
+\hline
+\end{DoxyParams}
+Formats the message with timestamp and user information, then appends it to the chat history for persistent storage. \mbox{\Hypertarget{classChatRoom_aca3f2e8e820d88f11d27effcd9f0ec27}\label{classChatRoom_aca3f2e8e820d88f11d27effcd9f0ec27}} 
+\index{ChatRoom@{ChatRoom}!sendMessage@{sendMessage}}
+\index{sendMessage@{sendMessage}!ChatRoom@{ChatRoom}}
+\doxysubsubsection{\texorpdfstring{sendMessage()}{sendMessage()}}
+{\footnotesize\ttfamily void Chat\+Room\+::send\+Message (\begin{DoxyParamCaption}\item[{const std\+::string}]{message,  }\item[{\mbox{\hyperlink{classUsers}{Users}} $\ast$}]{from\+User }\end{DoxyParamCaption})}
+
+
+
+Send a message to all users in the room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message content to deliver \\
+\hline
+{\em from\+User} & Pointer to the user who sent the message\\
+\hline
+\end{DoxyParams}
+Iterates through all registered users and calls their receive() method to deliver the message. Skips the sender to avoid echo. \mbox{\Hypertarget{classChatRoom_a679c08869b4c4e567eb5245c7568f0ec}\label{classChatRoom_a679c08869b4c4e567eb5245c7568f0ec}} 
+\index{ChatRoom@{ChatRoom}!userCount@{userCount}}
+\index{userCount@{userCount}!ChatRoom@{ChatRoom}}
+\doxysubsubsection{\texorpdfstring{userCount()}{userCount()}}
+{\footnotesize\ttfamily int Chat\+Room\+::user\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the number of users in the room. 
+
+\begin{DoxyReturn}{Returns}
+int Count of registered users 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ChatRoom_8h}{Chat\+Room.\+h}}\item 
+Chat\+Room.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,26 @@
+\hypertarget{chatHistoryIterator_8h_source}{}\doxysection{chat\+History\+Iterator.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CHATHISTORYITERATOR\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CHATHISTORYITERATOR\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{ChatRoom_8h}{ChatRoom.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{classchatHistoryIterator}{chatHistoryIterator}}\{}
+\DoxyCodeLine{8     \textcolor{keyword}{private}:}
+\DoxyCodeLine{9     \textcolor{keywordtype}{size\_t} position;}
+\DoxyCodeLine{10     \mbox{\hyperlink{classChatRoom}{ChatRoom}}* room;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \mbox{\hyperlink{classchatHistoryIterator}{chatHistoryIterator}}(\mbox{\hyperlink{classChatRoom}{ChatRoom}}* room): room(room), position(0)\{\};}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     std::string first();}
+\DoxyCodeLine{15     std::string next();}
+\DoxyCodeLine{16     \textcolor{keywordtype}{bool} isDone();}
+\DoxyCodeLine{17     std::string currentItem();}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} reset();}
+\DoxyCodeLine{19 \};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
